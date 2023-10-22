@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
 const restrictAccess = (req, res, next) => {
-    const allowedOrigins = ['http://1131movie.com', 'https://1131movie.com'];
+    const allowedOrigins = ['http://1131movie.com', 'https://1131movie.com', 'http://admin.1131movie.com', 'https://admin.1131movie.com'];
 
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
