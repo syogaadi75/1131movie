@@ -10,19 +10,19 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
-const restrictAccess = (req, res, next) => {
-    const allowedOrigins = ['http://1131movie.com', 'https://1131movie.com', 'http://admin.1131movie.com', 'https://admin.1131movie.com'];
+// const restrictAccess = (req, res, next) => {
+//     const allowedOrigins = ['http://1131movie.com', 'https://1131movie.com', 'http://admin.1131movie.com', 'https://admin.1131movie.com'];
 
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader('Access-Control-Allow-Origin', origin);
-        next();
-    } else {
-        res.status(403).json({
-            error: 'Akses ditolak'
-        });
-    }
-};
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//         res.setHeader('Access-Control-Allow-Origin', origin);
+//         next();
+//     } else {
+//         res.status(403).json({
+//             error: 'Akses ditolak'
+//         });
+//     }
+// };
 
 // Import Routes
 const filmsRoute = require('./routes/films')
